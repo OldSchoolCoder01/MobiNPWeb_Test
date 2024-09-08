@@ -7,15 +7,14 @@ import { AppRoutingModule } from './app-routing.module';  // Routing module
 
 // Non-standalone components
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 
 // Standalone components
+import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent,  // Non-standalone component
-    HeaderComponent  // Non-standalone component
+    AppComponent  // Non-standalone component
   ],
   imports: [
     BrowserModule,
@@ -23,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     RouterModule,  // For router-outlet
     AppRoutingModule,
+    HeaderComponent,  // Standalone component imported
     FooterComponent  // Standalone component imported
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],  // To allow custom elements like standalone components
