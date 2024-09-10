@@ -6,10 +6,10 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"    // Add polyfills.ts
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/**/*.ts"         // Ensure all TypeScript files in src directory are included
+    "src/**/*.ts"
   ]
 }

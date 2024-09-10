@@ -1,31 +1,22 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';  // Required for routing
-import { AppRoutingModule } from './app-routing.module';  // Routing module
-
-// Non-standalone components
 import { AppComponent } from './app.component';
-
-// Standalone components
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent  // Non-standalone component
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule,  // For router-outlet
-    AppRoutingModule,
-    HeaderComponent,  // Standalone component imported
-    FooterComponent  // Standalone component imported
+    RouterModule.forRoot(routes),
+    HeaderComponent,
+    FooterComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],  // To allow custom elements like standalone components
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
