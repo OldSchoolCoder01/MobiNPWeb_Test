@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "css"
+    }
+  },
   "projects": {
     "MobiNPWeb": {
       "root": "",
@@ -22,7 +27,6 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MobiNPWeb:build"
+            "buildTarget": "MobiNPWeb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MobiNPWeb:build:production"
+              "buildTarget": "MobiNPWeb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MobiNPWeb:build"
+            "buildTarget": "MobiNPWeb:build"
           }
         },
         "test": {
@@ -84,7 +88,6 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -105,9 +108,5 @@
         }
       }
     }
-  },
-  "defaultProject": "MobiNPWeb",
-  "cli": {
-    "analytics": false
   }
 }

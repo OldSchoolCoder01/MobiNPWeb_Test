@@ -4,7 +4,7 @@ import { PaymentService } from '../../services/payment.service';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.scss']
+  styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent {
   amount: number = 0;
